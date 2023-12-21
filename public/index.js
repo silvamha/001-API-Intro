@@ -9,9 +9,9 @@ const title2 = document.querySelector("#title-2");
 const subTitle2 = document.querySelector("#subtitle-2");
 const content2 = document.querySelector("#content-2");
 
-const submitBtn = document.querySelector('#submit-btn')
+const submitBtn = document.querySelector("#submit-btn");
 
-submitBtn.addEventListener('click',getIdea)
+submitBtn.addEventListener("click", getIdea);
 
 /**!SECTION Scope of project
  * 1. Fetch photos from two APIs and place them in cardImg
@@ -49,18 +49,25 @@ function getIdea() {
   fetch("https://nekos.best/api/v2/neko")
     .then((res) => res.json())
     .then((data) => {
-        data.results.forEach((item) =>{
-            const imgUrl = item.url
-     cardImg2.src=imgUrl
-              console.log(item.url); 
-        })
+      data.results.forEach((item) => {
+        const imgUrl = item.url;
+        cardImg2.src = imgUrl;
+        console.log(item.url);
+      });
+  let secret ="e3adcb87-3cbc-4966-bcc2-0437afdc00e3"
+  // let key = Number(secret)
+  console.log(secret)
+      fetch("https://content.guardianapis.com/search?q=debate&tag=politics/politics&from-date=2014-01-01&api-key=e3adcb87-3cbc-4966-bcc2-0437afdc00e3")      
+        .then((res) => res.json())
+        .then((data) => {
+          const results = data.response.results;
+          results.forEach((item) => {
+            console.log(item);
+          });
 
-   
+          console.log(data);
+        });
     });
 }
 
-/**!SECTION - NOTES
- * Worked on several more APIs and worked on implementing them in BULMA.
- * Next, create a new document with different sections and render different APIs using different BULMA components
- */
 getIdea();

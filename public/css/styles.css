@@ -29,7 +29,7 @@
   width: 100%;
 }
 
-#card-img-1,
+/* #card-img-1, */
 #card-img-2 {
   max-width: 100%;
   height: 100%;
@@ -40,4 +40,5 @@
   display: flex;
   flex-direction: column;
   height: 27em;
+overflow-y: scroll;
 }
