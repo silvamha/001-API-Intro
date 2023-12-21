@@ -1,0 +1,43 @@
+.navbar-burger {
+  transform: scale(1.5);
+  /* Adjust the scale value as needed */
+}
+
+/* Add this to your custom.css file and make sure it's loaded after bulma.css */
+.navbar-item img {
+  max-height: none;
+  /* This will override the default max-height */
+  height: auto;
+  /* Retain the aspect ratio */
+  width: auto;
+  /* Retain the aspect ratio */
+}
+
+/* If you want to specifically set a size */
+.navbar-item img {
+  height: 80px;
+  /* Or whatever height you want */
+  width: auto;
+  /* Adjust width accordingly to maintain the aspect ratio */
+}
+
+.section {
+  margin-top: 6.125rem;
+}
+
+.image {
+  width: 100%;
+}
+
+#card-img-1,
+#card-img-2 {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 27em;
+}
