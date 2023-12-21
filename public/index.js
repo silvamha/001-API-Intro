@@ -54,10 +54,7 @@ function getIdea() {
         cardImg2.src = imgUrl;
         console.log(item.url);
       });
-<<<<<<< HEAD
 // Corrected!!!
-=======
->>>>>>> 7ac4f588c32ef62f6e461ceef1762a68437cae87
       fetch("https://content.guardianapis.com/search?q=debate&tag=politics/politics&from-date=2014-01-01&api-key=e3adcb87-3cbc-4966-bcc2-0437afdc00e3")      
         .then((res) => res.json())
         .then((data) => {
